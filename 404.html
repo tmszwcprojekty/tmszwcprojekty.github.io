@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doneo</title>
+<script>
+  // Każdy adres (małe litery, sam początek, literówka w wielkości liter) prowadzi do Doneo.
+  var cel = "/Aplikacja-To-Do/";
+  var sciezka = location.pathname;
+  var reszta = "";
+  if (/^\/aplikacja-to-do(\/|$)/i.test(sciezka)) {
+    reszta = sciezka.replace(/^\/aplikacja-to-do\/?/i, "");
+  }
+  location.replace(cel + reszta + location.search + location.hash);
+</script>
+</head>
+<body style="font-family: system-ui, sans-serif; text-align: center; padding: 40px;">
+<p>Przenoszę do Doneo… <a href="/Aplikacja-To-Do/">Kliknij tutaj</a>, jeśli nic się nie dzieje.</p>
+</body>
+</html>
